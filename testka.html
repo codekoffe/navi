@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,17 +6,38 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"/>
 <title>API Demo - Kakao JavaScript SDK</title>
+
+<!-- Start: injected by Adguard -->
+<script src="//local.adguard.com/adguard-ajax-api/injections/content-script.js?ts=63681587048236&amp;domain=developers.kakao.com&amp;mask=111" nonce="941da4d4252c4bd7affa9c212035eb13" type="text/javascript"></script>
+<script src="//local.adguard.com/adguard-ajax-api/injections/userscripts.js?ts=63681328695387&name=AdGuard%20Popup%20Blocker&name=Adguard%20Assistant" nonce="941da4d4252c4bd7affa9c212035eb13" type="text/javascript"></script>
+
+<!-- End: injected by Adguard -->
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 
 </head>
 <body>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">
+[카카오내비] 목적지 공유하기
+</h3>
+</div>
+<div class="panel-body">
+<p>아래 데모는 모바일 기기에서 테스트 가능합니다.</p>
+<p>장소: 현대백화점 판교점</p>
+<p>좌표 정보</p>
+<p>x: 127.11205203011632</p>
+<p>y: 37.39279717586919</p>
+<p>coordType: 'wgs84'</p>
 <a id="navi" href="#" onclick="navi();">
 <img src="/assets/img/about/buttons/navi/kakaonavi_btn_medium.png"/>
 </a>
+</div>
+</div>
 <script type='text/javascript'>
   //<![CDATA[
     // 사용할 앱의 JavaScript 키를 설정해 주세요.
-    Kakao.init('YOUR APP KEY');
+    Kakao.init('b5f01f2079961979f62acc90ec325699');
     // 카카오 로그인 버튼을 생성합니다.
     function navi(){
         Kakao.Navi.share({

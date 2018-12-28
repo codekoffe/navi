@@ -65,9 +65,9 @@
     var x = Number(match[2]);
     var y = Number(match[3]);
     document.getElementById('destination').innerHTML = match.length === 0 ? '죄송합니다.<br>목적지 이름이 존재하지 않습니다.' : name;
-    Kakao.init('460a5b24614caf30516b40fe0fe4d943');
+    Kakao.init('b5f01f2079961979f62acc90ec325699');
     function navi() {
-      Kakao.Navi.start({
+      Kakao.Navi.share({
         name: name,
         x: x,
         y: y,

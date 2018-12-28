@@ -13,27 +13,19 @@
 <img src="/assets/img/about/buttons/navi/kakaonavi_btn_medium.png"/>
 </a>
 <script type='text/javascript'>
-    var search = decodeURIComponent(location.search);
-    var match = /name=(.*)&x=(.*)&y=(.*)/gi.exec(search) || [];
-    var name = match[1];
-    var x = Number(match[2]);
-    var y = Number(match[3]);
-
-    document.getElementById('destination').innerHTML = match.length === 0 ? '죄송합니다.<br>목적지 이름이 존재하지 않습니다.' : name;
-
-    Kakao.init('b5f01f2079961979f62acc90ec325699');
-
-    function navi() {
-      Kakao.Navi.share({
-        name: name,
-        x: x,
-        y: y,
-        coordType: 'wgs84'
-      });
+  //<![CDATA[
+    // 사용할 앱의 JavaScript 키를 설정해 주세요.
+    Kakao.init('YOUR APP KEY');
+    // 카카오 로그인 버튼을 생성합니다.
+    function navi(){
+        Kakao.Navi.share({
+            name: "현대백화점 판교점",
+            x: 127.11205203011632,
+            y: 37.39279717586919,
+            coordType: 'wgs84'
+        });
     }
-
-    setContentSize();
-    if(navigator.userAgent.indexOf('Android') > -1) navi();
+  //]]>
 </script>
 
 </body>

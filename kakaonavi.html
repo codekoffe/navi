@@ -6,12 +6,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"/>
 <title>API Demo - Kakao JavaScript SDK</title>
-
-<!-- Start: injected by Adguard -->
-<script src="//local.adguard.com/adguard-ajax-api/injections/content-script.js?ts=63681587048236&amp;domain=developers.kakao.com&amp;mask=111" nonce="941da4d4252c4bd7affa9c212035eb13" type="text/javascript"></script>
-<script src="//local.adguard.com/adguard-ajax-api/injections/userscripts.js?ts=63681328695387&name=AdGuard%20Popup%20Blocker&name=Adguard%20Assistant" nonce="941da4d4252c4bd7affa9c212035eb13" type="text/javascript"></script>
-
-<!-- End: injected by Adguard -->
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 
 </head>
@@ -35,34 +29,11 @@
 </div>
 <script type='text/javascript'>
     function setContentSize() {
-      var screen = window.screen;
-      var iconSize = screen.width / 3;
-      var iconMargin = screen.width / 3;
-      var destinationMartinTop = (screen.height / 2) - (iconSize + iconMargin);
-      var contentWidth = screen.width * 0.9;
-      var contentMargin = screen.width * 0.05;
 
-      var icon = document.getElementById('icon-kakao-navi');
-      var destination = document.getElementById('destination');
-      var btn = document.getElementById('btn');
-
-      icon.style.width = iconSize + 'px';
-      icon.style.marginLeft = iconMargin + 'px';
-      icon.style.marginTop = iconMargin + 'px';
-      destination.style.marginTop = destinationMartinTop + 'px';
-      destination.style.width = contentWidth + 'px';
-      destination.style.marginLeft = contentMargin + 'px';
-      btn.style.width = contentWidth + 'px';
-      btn.style.margin = contentMargin + 'px';
-    }
-
-    var search = decodeURIComponent(location.search);
-    var match = /name=(.*)&x=(.*)&y=(.*)/gi.exec(search) || [];
     var name = match[1];
     var x = Number(match[2]);
     var y = Number(match[3]);
 
-    document.getElementById('destination').innerHTML = match.length === 0 ? '죄송합니다.<br>목적지 이름이 존재하지 않습니다.' : name;
 
     Kakao.init('b5f01f2079961979f62acc90ec325699');
 

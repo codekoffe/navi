@@ -12,9 +12,11 @@
 <body>
 <div class="panel panel-default">
 <div class="panel-heading">
+
 <h3 class="panel-title">
 [카카오내비] 목적지 공유하기
 </h3>
+<h1 id="destination"></h1>
 </div>
 <div class="panel-body">
 <p>사용방법</p>
@@ -29,6 +31,30 @@
 </div>
 
     <script type='text/javascript'>
+        
+    function setContentSize() {
+      var screen = window.screen;
+      var iconSize = screen.width / 3;
+      var iconMargin = screen.width / 3;
+      var destinationMartinTop = (screen.height / 2) - (iconSize + iconMargin);
+      var contentWidth = screen.width * 0.9;
+      var contentMargin = screen.width * 0.05;
+
+      var icon = document.getElementById('icon-kakao-navi');
+      var destination = document.getElementById('destination');
+      var btn = document.getElementById('btn');
+
+      icon.style.width = iconSize + 'px';
+      icon.style.marginLeft = iconMargin + 'px';
+      icon.style.marginTop = iconMargin + 'px';
+      destination.style.marginTop = destinationMartinTop + 'px';
+      destination.style.width = contentWidth + 'px';
+      destination.style.marginLeft = contentMargin + 'px';
+      btn.style.width = contentWidth + 'px';
+      btn.style.margin = contentMargin + 'px';
+    }
+        
+        
      var search = decodeURIComponent(location.search);
      var match = /name=(.*)&x=(.*)&y=(.*)/gi.exec(search);
      var name = match[1];

@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <meta charset="utf-8"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"/>
+   <title>Kakao Navi</title>
+   <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+ </head>
+ <body>
+   <a id="btn" href="javascript:none;" onclick="navi();"></a>
+ 
+    <script type='text/javascript'>
+     var search = decodeURIComponent(location.search);
+     var match = /name=(.*)&x=(.*)&y=(.*)/gi.exec(search);
+     var name = match[1];
+     var x = Number(match[2]);
+     var y = Number(match[3]);
+ 
+     document.getElementById('btn').text = name || '죄송합니다. 목적지 이름이 존재하지 않습니다.';
+ 
+     function navi() {
+       Kakao.init('460a5b24614caf30516b40fe0fe4d943');
+       Kakao.Navi.start({
+         name: name,
+         x: x,
+         y: y,
+         coordType: 'wgs84'
+       });
+     }
+   </script>
+ </body>
+ </html>

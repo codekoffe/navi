@@ -34,10 +34,11 @@
      var name = match[1];
      var x = Number(match[2]);
      var y = Number(match[3]);
-     document.write('ㅎㅎㅎㅎㅎ'); 
-     document.getElementById.write(name); 
+     
      document.getElementById('btn').text = name || '죄송합니다. 목적지 이름이 존재하지 않습니다.';
      document.getElementById('destination').innerHTML = match.length === 0 ? '죄송합니다.<br>목적지 이름이 존재하지 않습니다.' : name;
+     안녕하세요;
+        
      function navi() {
        Kakao.init('b5f01f2079961979f62acc90ec325699');
        Kakao.Navi.share({

@@ -19,7 +19,6 @@
 </div>
 <div class="panel-body">
 <p>사용방법</p>
-##<a id="btn" href="javascript:none;" onclick="navi();">name</a>
 <p>name : 현대백화점 판교점</p>
 <p>x    : 127.11205203011632</p>
 <p>y    : 37.39279717586919</p>
@@ -37,8 +36,6 @@
      var name = match[1];
      var x = Number(match[2]);
      var y = Number(match[3]);
-     
-     document.getElementById('btn').text = name || '죄송합니다. 목적지 이름이 존재하지 않습니다.';
         
      function navi() {
        Kakao.init('b5f01f2079961979f62acc90ec325699');
@@ -49,7 +46,7 @@
          coordType: 'wgs84'
        });
      } 
-
+navi();
   </script>
 
 </body>

@@ -36,7 +36,7 @@
      var y = Number(match[3]);
  
      document.getElementById('btn').text = name || '죄송합니다. 목적지 이름이 존재하지 않습니다.';
- 
+     document.getElementById('destination').innerHTML = match.length === 0 ? '죄송합니다.<br>목적지 이름이 존재하지 않습니다.' : name;
      function navi() {
        Kakao.init('b5f01f2079961979f62acc90ec325699');
        Kakao.Navi.share({
